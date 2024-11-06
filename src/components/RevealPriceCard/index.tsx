@@ -2,6 +2,7 @@ import { FC, memo } from "react";
 
 import clsx from "clsx";
 import RevealCardContainer from "@/components/RevealCardContainer";
+import Button from "@/components/Button";
 interface RevealPriceCardProps {
   title: string;
   price: number;
@@ -27,9 +28,7 @@ const RevealPriceCard: FC<RevealPriceCardProps> = ({
         <span className="text-5xl font-extrabold">{price}$</span>
         <span className="text-base font-medium text-zinc-800">/month</span>
       </p>
-      <button className="mt-8 rounded-sm border-2 border-stone-900 bg-stone-900 px-6 py-3 font-semibold uppercase text-stone-100 transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:bg-slate-200 hover:text-stone-900 hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
-        Subscribe
-      </button>
+      <Button>Subscribe</Button>
     </RevealCardContainer>
   );
 };
