@@ -1,6 +1,7 @@
-import { FC, memo, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { FC, memo } from "react";
+
 import clsx from "clsx";
+import RevealCardContainer from "@/components/RevealCardContainer";
 interface RevealPriceCardProps {
   title: string;
   price: number;
@@ -13,22 +14,12 @@ const RevealPriceCard: FC<RevealPriceCardProps> = ({
   description,
   popular,
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end end"],
-  });
-  const moveY = useTransform(scrollYProgress, [0, 1], ["200px", "0px"]);
   return (
-    <motion.div
-      ref={ref}
+    <RevealCardContainer
       className={clsx(
         "flex max-w-xs flex-1 basis-1/3 flex-col rounded-lg bg-zinc-100 p-6 shadow-sm",
         popular && "border-2 border-pink-500",
       )}
-      style={{
-        y: moveY,
-      }}
     >
       <p className="text-2xl font-semibold leading-6">{title}</p>
       <p className="mt-4 text-zinc-800">{description}</p>
@@ -39,7 +30,7 @@ const RevealPriceCard: FC<RevealPriceCardProps> = ({
       <button className="mt-8 rounded-sm border-2 border-stone-900 bg-stone-900 px-6 py-3 font-semibold uppercase text-stone-100 transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:bg-slate-200 hover:text-stone-900 hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
         Subscribe
       </button>
-    </motion.div>
+    </RevealCardContainer>
   );
 };
 
