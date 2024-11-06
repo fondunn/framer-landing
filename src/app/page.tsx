@@ -1,9 +1,9 @@
-import Image from "next/image";
+import SectionHero from "@/components/Sections/Hero";
 
 export default function Home() {
   return (
     <>
-    main content of home page
+      <SectionHero />
     </>
   );
 }
