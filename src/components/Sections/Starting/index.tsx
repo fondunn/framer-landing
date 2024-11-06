@@ -43,7 +43,7 @@ const SectionStarting: FC = () => {
       </motion.p>
       <div className="mx-auto mt-4 flex flex-col items-center justify-center space-y-4 md:mt-8 lg:mt-12">
         {startingContent.map(({ title, description }, idx: number) => (
-          <SlideInCard index={idx}>
+          <SlideInCard index={idx} key={idx}>
             <p className="text-2xl font-bold">{title}</p>
             <p className="mt-2">{description}</p>
           </SlideInCard>
