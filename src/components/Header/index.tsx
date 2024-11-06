@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Header: FC = () => {
   return (
-    <header className="sticky top-0 z-50 bg-stone-200/80">
-      <div className="container mx-auto flex max-w-screen-2xl justify-between px-1 py-2 md:px-2 md:py-4 lg:px-4 xl:px-8">
+    <header className="sticky top-0 z-50 flex h-10 items-center bg-stone-200/80 md:h-14">
+      <div className="container mx-auto flex max-w-screen-2xl items-center justify-between px-1 md:px-2 lg:px-4 xl:px-8">
         <div>
           <Link href="/" className="font-bold uppercase">
             {SITE_NAME}
