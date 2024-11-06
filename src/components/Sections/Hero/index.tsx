@@ -52,7 +52,9 @@ const SectionHero = () => {
           }}
         >
           <Reveal>
-            <Button className="mt-16 px-16 py-4">Explore</Button>
+            <div className="px-4">
+              <Button className="mt-16 px-16 py-4">Explore</Button>
+            </div>
           </Reveal>
         </motion.div>
       </motion.div>
