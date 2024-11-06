@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { config } from "@/components/Sections/Hero/config";
 const SectionHero = () => {
   return (
-    <Section className="flex min-h-[70svh] flex-col items-center justify-center space-y-2 overflow-hidden bg-gradient-to-tr from-sky-300 to-rose-300 lg:space-y-4">
+    <Section className="flex min-h-[90svh] flex-col items-center justify-center space-y-2 overflow-hidden bg-gradient-to-tr from-sky-300 to-rose-300 lg:space-y-4">
       <motion.h1
         initial={config.h1.initial}
         animate={config.h1.animate}
