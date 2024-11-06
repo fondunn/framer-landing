@@ -1,12 +1,7 @@
 "use client";
 import Section from "@/components/Section";
 import { FC, useRef } from "react";
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import RevealPriceCard from "@/components/RevealPriceCard";
 import { pricing, pricingDescription, pricingTitle } from "@/mock/pricing";
 

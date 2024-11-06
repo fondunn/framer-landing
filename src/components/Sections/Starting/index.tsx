@@ -1,6 +1,6 @@
 "use client";
 import Section from "@/components/Section";
-import { FC, useMemo, useRef } from "react";
+import { FC, useRef } from "react";
 import {
   startingContent,
   startingDescription,
